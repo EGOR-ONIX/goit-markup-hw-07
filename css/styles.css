@@ -963,10 +963,10 @@ body {
   line-height: 2;
   letter-spacing: 0.04em;
 
-  color: var(--light-txt-cl);
+  color: rgb(255, 255, 255, 0.3);
 
   background-color: transparent;
-  border: 1px solid var(--border-footer-btn);
+  border: 1px solid rgb(255, 255, 255, 0.3);
   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
   border-radius: 4px;
   outline: transparent;
@@ -984,11 +984,18 @@ body {
 @media only screen and (min-width: 1158px) {
   .subscription-input {
     width: 266px;
+    color: var(--light-txt-cl);
+    border: 1px solid var(--border-footer-btn);
   }
 }
 
 .subscription-input::placeholder {
-  color: var(--light-txt-cl);
+  color: rgb(255, 255, 255, 0.6);
+}
+@media only screen and (min-width: 1158px) {
+  .subscription-input::placeholder {
+    color: var(--light-txt-cl);
+  }
 }
 
 .subscription-btn {
