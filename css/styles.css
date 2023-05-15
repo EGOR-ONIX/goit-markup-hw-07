@@ -788,8 +788,6 @@ body {
     align-items: normal;
     column-gap: 24px;
     row-gap: 72px;
-
-    padding-left: 108px;
   }
 }
 @media only screen and (min-width: 1158px) {
@@ -947,7 +945,7 @@ body {
 }
 
 .subscription-input {
-  width: 398px;
+  max-width: 398px;
   height: 40px;
 
   padding: 8px 16px;
@@ -958,7 +956,6 @@ body {
   letter-spacing: 0.04em;
 
   color: var(--light-txt-cl);
-  opacity: 0.3;
 
   background-color: transparent;
   border: 1px solid var(--border-footer-btn);
@@ -979,7 +976,6 @@ body {
 
 .subscription-input::placeholder {
   color: var(--light-txt-cl);
-  opacity: 0.6;
 }
 
 .subscription-btn {
@@ -1463,7 +1459,7 @@ body {
 
   cursor: pointer;
 
-  /* transition: background-color var(--anim-active), color var(--anim-active); */
+  transition: background-color var(--anim-active), color var(--anim-active);
 }
 .menu-btn-close-icon {
   fill: currentColor;
@@ -1494,12 +1490,10 @@ body {
 .mobile-contacts-tel {
   display: block;
 
-  width: 353px;
-
   font-weight: 700;
   font-size: 36px;
   line-height: 1.11;
-  letter-spacing: 0.02em;
+  /* letter-spacing: 0.02em; */
   text-transform: capitalize;
   color: var(--accent-mobile-menu-txt-cl);
 }
@@ -1512,9 +1506,15 @@ body {
 }
 .mobile-socials {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   gap: 56px;
 }
+@media only screen and (max-width: 427px) {
+  .mobile-socials {
+    gap: 24px;
+  }
+}
+
 .socials-item {
   width: 40px;
   height: 40px;
