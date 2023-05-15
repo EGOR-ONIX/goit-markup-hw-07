@@ -976,6 +976,11 @@ body {
     max-width: 100%;
   }
 }
+@media only screen and (min-width: 428px) {
+  .subscription-input {
+    width: 398px;
+  }
+}
 @media only screen and (min-width: 768px) {
   .subscription-input {
     width: 264px;
